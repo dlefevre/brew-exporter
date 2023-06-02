@@ -1,0 +1,809 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 1,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "custom": {
+              "neutral": 0
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "degree"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 0,
+          "y": 0
+        },
+        "id": 1,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "9.5.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "pid_measured_temp",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "PID Current Temperature",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "custom": {
+              "neutral": 0
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "degree"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 4,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "9.5.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "pid_set_temp",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "PID Requested Temperature",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "custom": {
+              "neutral": 0
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "percent"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 8,
+          "y": 0
+        },
+        "id": 3,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "9.5.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "pid_current_power_pct",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "PID Applied Power",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "custom": {
+              "neutral": 0
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "percent"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 12,
+          "y": 0
+        },
+        "id": 4,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "9.5.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "pid_max_power_pct",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "PID Maximum Power",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 12,
+          "w": 7,
+          "x": 16,
+          "y": 0
+        },
+        "id": 10,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "pid_max_power_pct",
+            "legendFormat": "Maximum",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "pid_current_power_pct",
+            "hide": false,
+            "legendFormat": "Current",
+            "range": true,
+            "refId": "B"
+          }
+        ],
+        "title": "Power",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "degree"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 0,
+          "y": 6
+        },
+        "id": 5,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "9.5.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "serialprobe_temp_1",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "Serial Probe 1",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "degree"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 4,
+          "y": 6
+        },
+        "id": 6,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "9.5.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "serialprobe_temp_2",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "Serial Probe 2",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "degree"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 8,
+          "y": 6
+        },
+        "id": 7,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "9.5.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "serialprobe_temp_3",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "Serial Probe 3",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "degree"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 12,
+          "y": 6
+        },
+        "id": 8,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "9.5.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "serialprobe_temp_4",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "Serial Probe 4",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "smooth",
+              "lineStyle": {
+                "fill": "solid"
+              },
+              "lineWidth": 2,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 10,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "degree"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 17,
+          "w": 23,
+          "x": 0,
+          "y": 12
+        },
+        "id": 9,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "pid_measured_temp",
+            "legendFormat": "PID",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "serialprobe_temp_1",
+            "hide": false,
+            "legendFormat": "Probe 1",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "serialprobe_temp_2",
+            "hide": false,
+            "legendFormat": "Probe 2",
+            "range": true,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "serialprobe_temp_3",
+            "hide": false,
+            "legendFormat": "Probe 3",
+            "range": true,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "b5ee72b7-0857-4d84-9bad-458b23980703"
+            },
+            "editorMode": "builder",
+            "expr": "serialprobe_temp_4",
+            "hide": false,
+            "legendFormat": "Probe 4",
+            "range": true,
+            "refId": "E"
+          }
+        ],
+        "title": "Temperature",
+        "type": "timeseries"
+      }
+    ],
+    "refresh": "5s",
+    "schemaVersion": 38,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Brew!",
+    "uid": "c51b8ca3-2c55-4dff-87f8-8d4974f7bff8",
+    "version": 3,
+    "weekStart": ""
+  }

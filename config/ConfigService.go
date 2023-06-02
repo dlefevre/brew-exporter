@@ -12,7 +12,8 @@ import (
 
 type ConfigService struct {
 	ListenAddress   string
-	SerialDevice    string
+	ProbeDevice     string
+	PidDevice       string
 	SerialBaud      int
 	SerialSize      byte
 	SerialStopBits  serial.StopBits
@@ -37,7 +38,8 @@ func GetConfigService() *ConfigService {
 // Construct a new parser
 func newConfigService() *ConfigService {
 	listenAddress := flag.String("listen", defaultListenAddress, "Listen address and port")
-	serialDevice := flag.String("device", defaultSerialDevice, "Serial device")
+	probeDevice := flag.String("probedevice", defaultSerialProbeDevice, "Serial device for Serial Probe")
+	pidDevice := flag.String("piddevice", defaultPidDevice, "Serial device for PID")
 	serialBaud := flag.Int("baud", defaultSerialBaud, "Baud rate")
 	sLogLevel := flag.String("loglevel", defaultLogLevel, "Log Level")
 	flag.Parse()
@@ -53,7 +55,8 @@ func newConfigService() *ConfigService {
 
 	service := &ConfigService{
 		ListenAddress:   *listenAddress,
-		SerialDevice:    *serialDevice,
+		ProbeDevice:     *probeDevice,
+		PidDevice:       *pidDevice,
 		SerialBaud:      *serialBaud,
 		SerialSize:      defaultSerialSize,
 		SerialStopBits:  defaultSerialStopBits,
@@ -68,7 +71,8 @@ func newConfigService() *ConfigService {
 // Some informational logging
 func (service *ConfigService) info() {
 	log.Infof("ConfigService: configured value for ListenAddress: `%s`", service.ListenAddress)
-	log.Infof("ConfigService: configured value for SerialDevice: `%s`", service.SerialDevice)
+	log.Infof("ConfigService: configured value for ProbeDevice: `%s`", service.ProbeDevice)
+	log.Infof("ConfigService: configured value for PidDevice: `%s`", service.PidDevice)
 	log.Infof("ConfigService: configured value for SerialBaud: `%d`", service.SerialBaud)
 	log.Infof("ConfigService: configured value for SerialSize: `%d`", service.SerialSize)
 	log.Infof("ConfigService: configured value for SerialStopBits: `%d`", service.SerialStopBits)

@@ -16,17 +16,20 @@ func main() {
 	log.SetFormatter(&log.TextFormatter{})
 	log.SetLevel(config.LogLevel)
 
-	parser := parser.GetSerialProbeParserService()
+	serialParser := parser.GetSerialProbeParserService()
+	pidParser := parser.GetPidParserService()
 	collector := collector.GetBrewCollector()
 
 	store := metrics.NewMetricStore()
-	parser.SetMetricStore(store)
+	serialParser.SetMetricStore(store)
+	pidParser.SetMetricStore(store)
 	collector.SetMetricStore(store)
 
 	var wg sync.WaitGroup
 	wg.Add(2)
 
-	go parser.Run()
+	go serialParser.Run()
+	go pidParser.Run()
 	go collector.Run()
 
 	wg.Wait()

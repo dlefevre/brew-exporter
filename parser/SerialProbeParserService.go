@@ -21,18 +21,18 @@ type SerialProbeParserService struct {
 	store      metrics.MetricStore
 }
 
-var instance *SerialProbeParserService = nil
-var lock = &sync.Mutex{}
+var serialInstance *SerialProbeParserService = nil
+var serialLock = &sync.Mutex{}
 
 // Returns the singleton instance
 func GetSerialProbeParserService() *SerialProbeParserService {
-	lock.Lock()
-	defer lock.Unlock()
+	serialLock.Lock()
+	defer serialLock.Unlock()
 
-	if instance == nil {
-		instance = newSerialProbeParserService()
+	if serialInstance == nil {
+		serialInstance = newSerialProbeParserService()
 	}
-	return instance
+	return serialInstance
 }
 
 // Construct a new parser
@@ -40,7 +40,7 @@ func newSerialProbeParserService() *SerialProbeParserService {
 	config := config.GetConfigService()
 
 	serialConf := &serial.Config{
-		Name:     config.SerialDevice,
+		Name:     config.ProbeDevice,
 		Baud:     config.SerialBaud,
 		Size:     config.SerialSize,
 		StopBits: config.SerialStopBits,
@@ -80,7 +80,7 @@ func (service *SerialProbeParserService) Run() {
 
 	service.validate()
 
-	log.Infof("SerialProbeParserService: Parsing serial data on %s", config.SerialDevice)
+	log.Infof("SerialProbeParserService: Parsing serial data on %s", config.ProbeDevice)
 
 	for {
 		str, err := service.reader.ReadString('\n')
