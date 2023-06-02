@@ -1,3 +1,7 @@
 /brew-exporter
 /prometheus/data
-
+/grafana/alerting
+/grafana/csv
+/grafana/log
+/grafana/png
+/grafana/grafana.db
